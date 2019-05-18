@@ -1,0 +1,33 @@
+title = "home"
+url = "/"
+layout = "layout4"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/home"
+==
+<article class="art art1" id="a1">
+    <h1>{{ 'O mnie:'|_ }} </h1>
+    {% content 'welcome.htm' %}
+</article>
+<article class="art art2" id="a2">
+    <h1>{{ 'Moje prace'|_ }}</h1>
+    <div>tu img</div>
+    <div>tu img</div>
+    
+</article>
+<article class="art art3" id="a3">
+        <h1>{{ 'Technologie'|_ }}</h1>
+        <span class="tech"><i class="fab fa-html5"></i></span>
+        <span class="tech"><i class="fab fa-sass"></i></span>
+        <img src="{{'assets/img/october-color-logo.svg' | theme}}"/>
+        <span class="tech"><i class="fab fa-laravel"></i></span>
+        <span class="tech"><i class="fab fa-php"></i></span>
+
+        <p></p>
+</article>
+<article class="art art4" id="a4">
+    <h1>Grzegorz Czekaj</h1>
+    <span><i class="fas fa-phone">799 175 994</i></span>
+    <span><i class="fas fa-at">grzegorz.czekaj@gmail.com</i></span>
+</article>

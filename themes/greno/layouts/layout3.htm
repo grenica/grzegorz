@@ -1,0 +1,29 @@
+description = "layout testowy"
+==
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ this.page.description }}">
+
+    <title>{% if this.page.title %}{{ this.page.title}} &#124; {% endif %}{{ this.theme.site_title }}</title>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{ ['assets/scss/theme3.scss']|theme }}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+    {% scripts %}
+</body>
+</html>

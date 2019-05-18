@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #857b7b;
+    font-family: 'Lato', sans-serif;
+}
+// smarfony
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background-color: #90a9c0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: url('../img/biurko-biuro-drewniany-small.jpg') no-repeat center center; 
+  //background: url('../img/biurko-laptop-small.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  //align-items: center;
+  //  justify-content: center;
+}
+.start {
+  display: flex;
+   //align-self: center;
+   color:#575151;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ height: 100vh;
+}
+.start1 {
+  text-transform: uppercase;
+  
+}
+.start1, .start3 {
+  
+  text-align: center;
+  font-size: 50px;
+  padding: 10px 40px;
+}
+.start2 {
+  border: groove 1px #575151;
+  width: 60%;
+}
+.art {
+  padding: 20px 40px;
+  //test
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.art h1 {
+  text-align: center;
+}
+.art1 {
+  z-index: 1;
+  color: #614747;
+  opacity: 0;
+  //transition-duration:2s;
+ // -webkit-transition-duration:2s; /* dla Google Chrome, Safar */
+  background-color: #cabfbf;
+  
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.art.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.art2 {
+  background-color: #822196;
+}
+.art4 {
+  text-align: center;
+}
+.footer {
+  color: #cabfbf;
+  background-color: #312d31;
+  padding: 20px 25px;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  
+  font-size: 18px;
+    //background-image: linear-gradient(260deg, #4d7088 0%, #882f14   100%);
+    //border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+}
+.main-nav {
+  display: none;
+  list-style-type: none;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 100vh;
+
+ // margin-right: 30px;
+ // flex-direction: row;
+ // justify-content: flex-end;
+}
+.nav-links, .logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.702);
+  
+}
+/* .nav-links {
+  display: block;
+} */
+
+.nav-links:hover {
+  display: block;
+  background-color: #3f2d2d;
+}
+
+.logo {
+  color:rgb(87, 81, 81);
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.main-nav li {
+  
+  text-align: center;
+  margin: 20px auto;
+ // padding: 40px auto;
+  text-transform: uppercase;
+}
+/* .main-nav li:hover {
+  background-color: #301e1e;
+} */
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer; 
+  color:rgb(87, 81, 81);
+  font-size: 24px;
+}
+.active {
+  //z-index: 0;
+  display: block;
+  background-image: linear-gradient(260deg, #4d7088 0%, #882f14   100%);
+}
+
+.tech {
+  font-size: 3em; 
+  color: Tomato;
+  margin: 5%;
+}
+// tablety
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid; 
+    grid-template-areas: 
+    "header"
+    "art1"
+    "art2"
+    "footer"
+  }
+  .header {
+    background-color: #90a9c0;
+    //pod grid
+    grid-area: header;
+    height: 100vh; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 8px;
+  }
+
+  .navbar-toggle {
+    display: none;
+}
+.nav-links {
+  margin-left: 40px;
+}
+  .logo {
+    opacity: 1 ;
+  }
+  .navbar {
+    font-size: 18px;
+      background-image: linear-gradient(260deg, #2f393f 0%, #c9a327   100%);
+      
+  }
+}
