@@ -80,7 +80,7 @@
     display: block;
     background-color: #3f2d2d;
   }
-
+/*
 .intro {
     margin-top:50px;
     background-color: chartreuse;
@@ -89,8 +89,45 @@
     flex-direction: row;
     justify-content: center;
 }
+*/
+.intro {
+  margin-top:50px;
+  position: absolute;
+  background-color: chartreuse;
+  /* swordkowanie*/
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  // height: 400px;
+  height: calc(100vh - 50px);
+ // width: 1000px;
+  width: 100%;
+  display: flex;
+}
+
 #intr1 {
-    background-color: darksalmon;
+  width: calc(50% - 50px); 
+  height: 100%;
+  background-color: red;
+}
+
+
+#intr2 {
+  width: calc(50% + 50px); 
+  height: 100%;
+  background-color: yellow;
+ border-left: 100px solid red;
+  // border-bottom: 400px solid transparent;
+  border-bottom: calc(100vh - 50px) solid transparent;
+}
+/*
+ 
+  
+*/
+
+/*
+#intr1 {
+    background-color: #e9967a;
     width: 40%;
    // margin: 10px 20px;
 }
@@ -100,6 +137,8 @@
     
    // margin: 10px 20px;
 }
+*/
+/*
 #intr2::before {
     content: "";
     display: block;
@@ -109,6 +148,7 @@
     height: 100%;
     animation: animacja2 2s ease-out;
 }
+*/
 
 @keyframes animacja1 {
     0%{
