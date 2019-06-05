@@ -32,6 +32,7 @@
    // padding-bottom: 10px;
    //border-bottom: solid 1px #153258;
    height: 40px;
+   z-index: 40;
   }
 
 .navbar::after {
@@ -82,49 +83,121 @@
   }
 /*
 .intro {
-    margin-top:50px;
-    background-color: chartreuse;
-    height: 80vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-*/
-.intro {
   margin-top:50px;
   position: absolute;
   background-color: chartreuse;
-  /* swordkowanie*/
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
-  // height: 400px;
   height: calc(100vh - 50px);
- // width: 1000px;
   width: 100%;
   display: flex;
 }
-
 #intr1 {
   width: calc(50% - 50px); 
   height: 100%;
   background-color: red;
 }
-
-
 #intr2 {
   width: calc(50% + 50px); 
   height: 100%;
   background-color: yellow;
  border-left: 100px solid red;
-  // border-bottom: 400px solid transparent;
   border-bottom: calc(100vh - 50px) solid transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-/*
- 
-  
 */
 
+/*   tymczas
+.intro1 {
+  width: calc(50% - 50px); 
+  background-color: red;
+}
+
+.intro2 {
+  width: calc(50% + 50px); 
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+*/
+
+.intro {
+  margin-top:48px;
+  //background-color: chartreuse;
+  background-image: url('../img/biurko-laptop-small.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  font-size: 1.7rem;
+}
+.intro1 {
+  //width: calc(50% - 50px); 
+  width: 55%;
+  display: flex;
+  text-align: left;
+  padding: 20px 20px;
+  
+}
+.intro2 {
+  //width: calc(50% + 50px); 
+  width: 45%;
+  padding: 20px 20px;
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  opacity: 0.8;
+  animation: animacja6 5s ease-out;
+}
+/* obraz 2 */
+
+.intro2 h1, .intro2 h2 {
+  color: #90a9c0;
+  z-index: 30;
+  text-align: right;
+  
+}
+.intro1 h1 {
+  color: #90a9c0;
+  animation: animacja4 1s ease-in;
+  text-transform: uppercase;
+  background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.intro2 h1, h2 {
+  animation: animacja5 1s ease-in;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.intro2::before {
+  content:"";
+    position:absolute;
+    background: black;
+    top: 0;
+    bottom: 0;
+    left:-60px;  /* -60px */
+    width: 120px;
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    transform: skew(-10deg);
+    animation: animacja3 4s  easy-out;
+    
+}
+
+/* koniec obraz 2*/
 /*
 #intr1 {
     background-color: #e9967a;
@@ -166,3 +239,45 @@
         height: 100%;
     }
   }
+
+@keyframes animacja3 {
+  0% {
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -ms-transform: skew(0deg);
+    transform: skew(0deg);
+  }
+    100% {
+      -webkit-transform: skew(-10deg);
+      -moz-transform: skew(-10deg);
+      -ms-transform: skew(-10deg);
+      transform: skew(-10deg);
+    }
+}
+@keyframes animacja4 {
+  0%{
+      transform: translateY(10%);
+      opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes animacja5 {
+  0%{
+      transform: translateY(-40%);
+      opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes animacja6 {
+  0%{
+      
+      opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

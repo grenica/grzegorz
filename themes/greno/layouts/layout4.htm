@@ -1,3 +1,4 @@
+[extendedLocalePicker]
 ==
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@
                     <span class="navbar-toggle test">
                         <i class="fas fa-bars"></i> 
                     </span>
-                    
+                    {% component 'extendedLocalePicker' %}
                     <a href="#" class="logo">Logo</a>
                     <ul class="main-nav">
                         <li><a href="#home" class="nav-links">Home</a></li>
@@ -33,6 +34,7 @@
                    {% partial "intro" %}
                 </div>
             </header>
+            
             {% page %}
 
             <footer class="footer">
