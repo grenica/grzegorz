@@ -12,7 +12,7 @@ $navbar-height: 50px;
 body {
     margin: 0;
     padding: 0;
-    background-color: #8dbd89;
+    background-color: white;
     font-family: 'Lato', sans-serif;
 }
 
@@ -21,13 +21,14 @@ body {
   flex-direction: column;
 }
 .header {
-  background-color: $header-color;
-  height: 100vh;
+  //background-color: $header-color;
+  height: 100vh; //calc(100vh - $navbar-height);
   display: flex;
   flex-direction: column;
   background-image: url('../img/biurko-laptop-small.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 0 10px 8px -8px black;
 }
 .navbar {
   position: fixed;
@@ -64,7 +65,7 @@ body {
     width: 40%;
   }
   h1, h2 {
-    background: linear-gradient(to left, #30CFD0 0%, #da7b0f 100%);
+    background: linear-gradient(to right, #30CFD0 0%, #da7b0f 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 3rem;
@@ -84,4 +85,82 @@ body {
     text-align: right;
   }
 }
-
+.art {
+  padding: 10px 10px;
+  margin-top:20px;
+  h1 {
+    margin:5px 7px;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    //color: #155b94;
+    background: linear-gradient(to left, #30CFD0 0%, #da7b0f 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid #3f2f2f;
+  }
+  p {
+    //line-height:
+    margin: 10px 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: justify; 
+    line-height: 28px;
+    //letter-spacing: 2px;
+    word-spacing: 0.3rem;
+  }
+  
+}
+.art2 {
+  //background-color: #6a9194;
+  color: #310f0f;
+  font-size: 6rem;
+  display: flex;
+  flex-direction: column;
+  .techlist {
+    display: flex;
+    flex-wrap: wrap;
+    //width: 100%;
+    .tech {
+      width: 50%;
+      text-align: center;
+      //align-self: center;
+    }
+  }
+ 
+}
+.record-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+  //justify-content: center;
+  li {
+    margin: 7px 0;
+    
+    a {
+      display: block;
+      img {
+        width: 100%;
+        &:hover {
+          -webkit-filter: grayscale(0);
+	        filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+footer {
+  font-size: .8rem;
+  //font-weight: 800;
+  text-align: center;
+  padding: 8px 10px;
+  background-color: #3f2f2f;
+  color: white;
+  a {
+    color: #d65b22;
+  &:fover {
+    color:#b87658;
+  }
+  }
+}
