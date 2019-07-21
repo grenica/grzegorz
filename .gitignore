@@ -15,6 +15,7 @@ bootstrap/*
 
 storage/*
 
+artisan
 index.php
 
 server.php
