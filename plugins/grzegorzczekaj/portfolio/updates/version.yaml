@@ -3,3 +3,9 @@
 1.0.2:
     - 'Created table grzegorzczekaj_portfolio_works'
     - builder_table_create_grzegorzczekaj_portfolio_works.php
+1.0.3:
+    - 'Updated table grzegorzczekaj_portfolio_works'
+    - builder_table_update_grzegorzczekaj_portfolio_works.php
+1.0.4:
+    - 'Updated table grzegorzczekaj_portfolio_works'
+    - builder_table_update_grzegorzczekaj_portfolio_works_2.php

@@ -3,21 +3,41 @@ fields:
         label: Nazwa
         span: left
         type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    show:
+        label: Pokaż
+        span: auto
+        default: 1
+        type: switch
     url:
         label: URL
         span: right
+        type: text
+    short_info:
+        label: Info
+        span: full
         type: text
     desc:
         label: Opis
         size: ''
         span: full
         type: richeditor
-    show:
-        label: Pokaż
-        span: auto
-        type: switch
     image:
         label: 'Media finder'
         span: auto
         mode: file
         type: mediafinder
+    stack:
+        label: Stack
+        mode: string
+        separator: comma
+        customTags: true
+        useKey: false
+        span: auto
+        type: taglist
