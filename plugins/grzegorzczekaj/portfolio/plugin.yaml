@@ -2,10 +2,10 @@ plugin:
     name: 'grzegorzczekaj.portfolio::lang.plugin.name'
     description: 'grzegorzczekaj.portfolio::lang.plugin.description'
     author: 'Grzegorz Czekaj'
-    icon: oc-icon-hand-o-up
+    icon: oc-icon-adjust
     homepage: ''
 navigation:
-    main-menu-item:
-        label: Portfolio
+    'Menu Item':
+        label: 'grzegorzczekaj.portfolio::lang.plugin.name'
         url: grzegorzczekaj/portfolio/portfolio
         icon: icon-life-ring

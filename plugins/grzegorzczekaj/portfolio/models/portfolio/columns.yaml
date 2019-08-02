@@ -6,8 +6,8 @@ columns:
         label: name
         type: text
         searchable: true
-    short_info:
-        label: info
+    desc:
+        label: desc
         type: text
     url:
         label: url

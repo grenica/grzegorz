@@ -14,7 +14,7 @@ class BuilderTableCreateGrzegorzczekajPortfolioWorks extends Migration
             $table->string('name')->nullable();
             $table->text('desc')->nullable();
             $table->string('url')->nullable();
-            $table->boolean('show')->default(1);
+            $table->string('show')->default('1');
             $table->string('image');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
