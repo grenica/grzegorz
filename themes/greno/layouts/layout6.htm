@@ -1,4 +1,3 @@
-[extendedLocalePicker]
 ==
 <!DOCTYPE html>
 <html>
@@ -8,37 +7,19 @@
         <meta name="description" content="{{ this.page.description }}">
         <title>{{ this.page.title }}</title>
         {% styles %}
-        <link href="{{ ['assets/scss/theme5.scss']|theme }}" rel="stylesheet">
+        <link href="{{ ['assets/scss/theme6.scss']|theme }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
         <div class="container">
-             
-            <header class="header" id="home">
-                <nav class="navbar">
-                    <span class="navbar-toggle test">
-                        <i class="fas fa-bars"></i> 
-                    </span>
-                    <div class="langs">
-                        {% component 'extendedLocalePicker' %}
-                    </div>
-                    <!-- <a href="#" class="logo">Logo</a> -->
-                    <ul class="main-nav">
-                        <li><a href="#home" class="nav-links">Home</a></li>
-                        <li><a href="#a1" class="nav-links">O mnie</a></li>
-                        <li><a href="#a2" class="nav-links">Porfolio</a></li>
-                        <li><a href="#a3" class="nav-links">Technologie</a></li>
-                        <li><a href="#a4" class="nav-links">Kontakt</a></li>
-                    </ul>
-                </nav>
-                <!-- <hr/> -->
-                <div class="intro">
-                   {% partial "intro" %}
-                </div>
+            <header class="header">
+                    {% partial "navs" %}    
+                    {% partial "intro" %}   
             </header>
-            
-            {% page %}
-
+            <main>
+                {% page %}
+            </main>
             <footer class="footer">
                 <span>&copy; <a href="http://grzegorzczekaj.eu">grzegorzczekaj.eu</a> 2019 All rights reserved</span>
             </footer>
