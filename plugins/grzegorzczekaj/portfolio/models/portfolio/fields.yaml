@@ -1,0 +1,23 @@
+fields:
+    name:
+        label: Nazwa
+        span: left
+        type: text
+    url:
+        label: URL
+        span: right
+        type: text
+    desc:
+        label: Opis
+        size: ''
+        span: full
+        type: richeditor
+    show:
+        label: Pokaż
+        span: auto
+        type: switch
+    image:
+        label: 'Media finder'
+        span: auto
+        mode: file
+        type: mediafinder

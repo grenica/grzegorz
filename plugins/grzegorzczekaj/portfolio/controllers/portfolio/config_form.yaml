@@ -1,0 +1,10 @@
+name: Portfolio
+form: $/grzegorzczekaj/portfolio/models/portfolio/fields.yaml
+modelClass: GrzegorzCzekaj\Portfolio\Models\Portfolio
+defaultRedirect: grzegorzczekaj/portfolio/portfolio
+create:
+    redirect: 'grzegorzczekaj/portfolio/portfolio/update/:id'
+    redirectClose: grzegorzczekaj/portfolio/portfolio
+update:
+    redirect: grzegorzczekaj/portfolio/portfolio
+    redirectClose: grzegorzczekaj/portfolio/portfolio

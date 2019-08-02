@@ -1,0 +1,4 @@
+title: Portfolio
+modelClass: GrzegorzCzekaj\Portfolio\Models\Portfolio
+toolbar:
+    buttons: reorder_toolbar
