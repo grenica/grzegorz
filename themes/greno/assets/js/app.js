@@ -32,37 +32,41 @@
   })
   .addTo(controller); */
 
-  $('.art').each(function() {
+  // $('.art').each(function() {
 
-    console.log(this);
-    var controller = new ScrollMagic.Controller();
-    var scena = new ScrollMagic.Scene({
-    triggerElement: this,
-    triggerHook: 0.8,
-   // reverse: false
-  })
-  .setClassToggle(this,'fade-in') // dodaj klase fade-in do el. ID=a1
-  .addIndicators({
-    name: 'przejscie',
-    //indent: 200,
-    colorTrigger: 'black',
-    colorStart: '#c20d0d',
-    colorEnd: 'pink'
-  })
-  .addTo(controller); 
-  });
+  //   console.log(this);
+  //   var controller = new ScrollMagic.Controller();
+  //   var scena = new ScrollMagic.Scene({
+  //   triggerElement: this,
+  //   triggerHook: 0.8,
+  //  // reverse: false
+  // })
+  // .setClassToggle(this,'fade-in') // dodaj klase fade-in do el. ID=a1
+  // .addIndicators({
+  //   name: 'przejscie',
+  //   //indent: 200,
+  //   colorTrigger: 'black',
+  //   colorStart: '#c20d0d',
+  //   colorEnd: 'pink'
+  // })
+  // .addTo(controller); 
+  // });
 
 });
 
-$('.test').click(function() {
+$('.navbar-toggle').click(function() {
   //włącz/wyłącz klasę
- // $(this).toggleClass('active');
-
-  $('.main-nav').toggleClass('active');
+  //$(this).toggleClass('active');
+  console.log('wlacz');
+  $('.main-nav').toggleClass('activemenu');
 });
 
-$('.main-nav li a').click(function(){
-  $('.main-nav').toggleClass('active');
+$('.nav-links').click(function() {
+  $('.main-nav').removeClass('activemenu');
 });
+
+// $('.main-nav li a').click(function(){
+//   $('.main-nav').toggleClass('active');
+// });
 
 

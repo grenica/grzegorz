@@ -1,0 +1,15 @@
+title = "portfolio"
+url = "/portfolio/:slug"
+layout = "layout6"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "GrzegorzCzekaj\Portfolio\Models\Portfolio"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<article>
+ {% component 'builderDetails' %}
+ </article>

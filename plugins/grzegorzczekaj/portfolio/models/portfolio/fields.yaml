@@ -21,3 +21,18 @@ fields:
         span: auto
         mode: file
         type: mediafinder
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    stack:
+        label: Stack
+        span: auto
+        mode: string
+        separator: comma
+        customTags: true
+        useKey: false
+        type: taglist
