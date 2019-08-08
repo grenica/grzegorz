@@ -1,6 +1,6 @@
 title = "portfolio"
 url = "/portfolio/:slug"
-layout = "layout6"
+layout = "layout7"
 is_hidden = 0
 
 [builderDetails]
@@ -11,5 +11,19 @@ displayColumn = "name"
 notFoundMessage = "Record not found"
 ==
 <article>
- {% component 'builderDetails' %}
+ {% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+<h1>
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+</h1>
+ <div>
+     <img src="{{ record.image }}"/>
+ <p>{{ record.desc|raw }}</p>
+ <div class="stack"> {{ record.stack }}</div>
+ </div>
  </article>
