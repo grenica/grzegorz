@@ -42,6 +42,24 @@ body {
   padding: 10px 10px;
   background-color: rgba(68, 46, 21, 0.788);
   color: #ffffff;
+  .langs {
+    a {
+      display: inline-block;
+      background-color: #fff;
+      color: black;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      margin-left: 10px;
+      padding: 5px 4px;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 2px;
+      &:hover {
+        background-color: #c4bfbf;
+      }
+    }
+  }
+  
 }
 .main-nav {
   display: none;
@@ -287,8 +305,8 @@ footer {
     text-align: center;
     padding: 1% 1%;
     color: #afcea3;
-    font-size: 2em;
-    width: 80%;
+    font-size: 2.2em;
+    width: 100%;
     text-decoration: none;
     &:hover {
       background-color: #75a7ad;
@@ -296,4 +314,13 @@ footer {
     }
   }
  
+}
+#a1 {
+  text-align: center;
+}
+/* napis logo */
+.logo {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #65878b;
 }
