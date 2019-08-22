@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+html {
+  font-size:16px;
+}
+$header-color: #75a7ad;
+$navbar-height: 50px;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+   // font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background-color: $header-color;
+  // display: flex;
+  // flex-direction: column;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+ // box-shadow: 0 10px 8px -8px black;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: $navbar-height;
+  z-index: 40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: rgba(68, 46, 21, 0.788);
+  color: #ffffff;
+  .langs {
+    a {
+      display: inline-block;
+      background-color: #fff;
+      color: black;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      margin-left: 10px;
+      padding: 5px 4px;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 2px;
+      &:hover {
+        background-color: #c4bfbf;
+      }
+    }
+  }
+  
+}
+.main-nav {
+  display: none;
+  list-style-type: none;
+}
+.navbar-toggle {
+  cursor: pointer; 
+  font-size: 26px;
+}
+main {
+  margin-top: 50px;
+}
+// .info_portfolio {
+  
+// }
+footer {
+  font-size: .9rem;
+  //font-weight: 800;
+  text-align: center;
+  padding: 8px 10px;
+  background-color: #3f2f2f;
+  color: white;
+  a {
+    color: #d65b22;
+    &:hover {
+      color:#b87658;
+    }
+  }
+}
+.activemenu {
+  position: absolute;
+  top:50px;
+  left:0;
+  z-index: 100;
+  display: block;
+  background-color: #000;
+  width: 100%;
+  /* do poprawy */
+  height: calc(100vh - 50px);
+  text-align: center;
+  .nav-links {
+    display: block;
+    text-align: center;
+    padding: 1% 1%;
+    color: #afcea3;
+    font-size: 2.2em;
+    width: 100%;
+    text-decoration: none;
+    &:hover {
+      background-color: #75a7ad;
+      color: #000;
+    }
+  }
+ 
+}
+#a1 {
+  text-align: center;
+}

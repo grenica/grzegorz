@@ -7,16 +7,15 @@
         <meta name="description" content="{{ this.page.description }}">
         <title>{{ this.page.title }}</title>
         {% styles %}
-        <link href="{{ ['assets/scss/theme6.scss']|theme }}" rel="stylesheet">
+        <link href="{{ ['assets/scss/theme7.scss']|theme }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
         <div class="container">
-            <header class="header">
-                    {% partial "navs" %}    
-                   
-            </header>
+            <header>
+                    {% partial "navs2" %}  
+            </header>   
             <main>
                 {% page %}
             </main>

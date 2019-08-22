@@ -18,7 +18,7 @@ function onStart()
             <img src="{{ record.image|media }}" alt=""/>
             <figcaption>
                 <!-- <h2> {{ record.name }}</h2> -->
-                <a href="#">link</a>
+                <a href="{{ 'portfolio'|page({'slug': record.slug}) }}">Więcej</a>
                 
                 <p></p>
             </figcaption>

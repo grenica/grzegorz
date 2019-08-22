@@ -21,8 +21,8 @@ notFoundMessage = "Record not found"
     {{ notFoundMessage }}
 {% endif %}
 </h1>
- <div>
-     <img src="{{ record.image }}"/>
+ <div class="info_portfolio">
+     <img src="{{ record.image|media }}"/>
  <p>{{ record.desc|raw }}</p>
  <div class="stack"> {{ record.stack }}</div>
  </div>
