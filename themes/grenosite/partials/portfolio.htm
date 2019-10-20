@@ -1,0 +1,43 @@
+==
+<?php
+use  \Grzegorzczekaj\Portfolio\Models\Portfolio;
+
+function onStart()
+{
+    $this['portolio'] = Portfolio::where('show',1)->get();
+   // $this['portolio'] = Portolio::where('show', 1)->get();
+ // $cat = Categories::where('slug',$slugcat)->first();
+}
+?>
+==
+<!-- <div class="portfolio"> -->
+    <!-- 
+        <figure>
+            <img src="{{ record.image|media }}" alt=""/>
+            <figcaption>
+                 <h2> {{ record.name }}</h2>
+                <a href="{{ 'portfolio'|page({'slug': record.slug}) }}">Więcej</a>
+            </figcaption>
+        </figure>
+ 
+ </div> -->
+
+<div id="portfolio">
+   {% for record in portolio %} 
+        <figure>
+            <a href="#openModal{{record.id}}">
+            <img src="{{ record.image|media }}" alt=""/></a>
+            <figcaption>
+                    {{ record.name }}
+            </figcaption>
+        </figure>
+        <div id="openModal{{record.id}}" class="modalDialog">
+                <div>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h2>{{ record.name }}</h2>
+                        <p>{{ record.desc| raw }}</p>
+                </div>
+        </div>
+    {% endfor %}
+</div>
+

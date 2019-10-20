@@ -1,0 +1,247 @@
+ $header-color: #90a9c0;
+
+ * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #8dbd89;
+    font-family: 'Lato', sans-serif;
+}
+// smarfony
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+    background-color: $header-color;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+  }
+.navbar {
+    position: fixed;
+    width: 100%;
+    font-size: 18px;
+   // padding-bottom: 10px;
+   //border-bottom: solid 1px #153258;
+   height: 40px;
+   z-index: 40;
+  }
+
+.navbar::after {
+    content: "";
+    display: block;
+    margin: 0 auto; /* wyśrodkowanie */
+    width:80%;
+    height: 10px;
+    //background-color: brown;
+    border-bottom: solid 3px #153258;
+    animation: animacja1 2s;
+    
+}
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color:rgb(87, 81, 81);
+    font-size: 24px;
+}
+.logo {
+   color:rgb(87, 81, 81);
+   display: inline-block;
+   font-size: 24px;
+   margin-top: 8px;
+   //margin-left: 20px;
+   width: 20%;
+   text-align: center;
+ } 
+  
+.main-nav {
+    display: none;
+    list-style-type: none;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: 100vh;
+}
+.nav-links, .logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.702);
+    
+}
+.nav-links:hover {
+    display: block;
+    background-color: #3f2d2d;
+}
+.intro {
+    margin-top:48px;
+    //background-color: chartreuse;
+    background-image: url('../img/biurko-laptop-small.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-size: 1.7rem;
+}
+.intro1 {
+    //width: calc(50% - 50px); 
+    width: 55%;
+    display: flex;
+    text-align: left;
+    padding: 20px 20px;
+    
+}
+.intro2 {
+    //width: calc(50% + 50px); 
+    width: 45%;
+    padding: 20px 20px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    opacity: 0.8;
+    animation: animacja6 5s ease-out;
+}
+  /* obraz 2 */
+  
+.intro2 h1, .intro2 h2 {
+    color: #90a9c0;
+    z-index: 30;
+    text-align: right;
+    
+}
+.intro1 h1 {
+    color: #90a9c0;
+    animation: animacja4 1s ease-in;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.intro2 h1, h2 {
+    animation: animacja5 1s ease-in;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.intro2::before {
+    content:"";
+      position:absolute;
+      background: black;
+      top: 0;
+      bottom: 0;
+      left:-60px;  /* -60px */
+      width: 120px;
+      -webkit-transform: skew(-10deg);
+      -moz-transform: skew(-10deg);
+      -ms-transform: skew(-10deg);
+      transform: skew(-10deg);
+      animation: animacja3 4s  easy-out;
+      
+}
+.langs {
+  display: flex;
+  width: 50%;
+  
+  a {
+    text-decoration: none;
+    margin: 7px;
+    display: block;
+    background: #706868;
+    color: black;
+    padding: 4px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    &:hover {
+      background: #965d5d;
+    }
+  }
+  .activelang {
+    background-color: #aaa6a6;
+  }
+}
+
+.art {
+  padding: 20px 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes animacja1 {
+    0%{
+        width: 10%;
+    }
+    100% {
+        width: 80%;
+    }
+  }
+@keyframes animacja2 {
+    0%{
+        height: 10%;
+    }
+    100% {
+        height: 100%;
+    }
+  }
+
+@keyframes animacja3 {
+  0% {
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -ms-transform: skew(0deg);
+    transform: skew(0deg);
+  }
+    100% {
+      -webkit-transform: skew(-10deg);
+      -moz-transform: skew(-10deg);
+      -ms-transform: skew(-10deg);
+      transform: skew(-10deg);
+    }
+}
+@keyframes animacja4 {
+  0%{
+      transform: translateY(10%);
+      opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes animacja5 {
+  0%{
+      transform: translateY(-40%);
+      opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes animacja6 {
+  0%{
+      
+      opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

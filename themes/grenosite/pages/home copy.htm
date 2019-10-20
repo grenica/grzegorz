@@ -1,0 +1,47 @@
+title = "home"
+url = "/"
+layout = "layout"
+is_hidden = 0
+==
+<section id="sekcja1"> 
+<!-- <div class="filter"> -->
+<div id="info">
+    <h1 id="info1"><span>Grzegorz</span> Czekaj</h1>
+    <p id="info2">Web developer</p>
+</div>
+<!-- </div> -->
+</section>
+
+<section id="sekcja2" class="sec"> 
+    <h1 id="h1">{{ 'O mnie'|_ }} </h1>
+    <!-- <div>1</div> -->
+    <div>
+   <img src="{{'Gcz_mini.png' |media }}" alt="Foto Grzegorz Czekaj"/>
+   {% content 'about.htm' %}
+    </div>
+    
+    <!-- <p>Web developer</p> -->
+</section>
+<section id="sekcja3" class="sec"> 
+
+        <h1>{{ 'Umiejętności'|_ }}</h1>
+        <p>Moje</p>
+    
+</section>
+<section id="sekcja4">
+        <article>
+               <h1>Nagłowek</h1>
+               <p>akapit 1</p>
+               <p>akapit 1</p>
+               <p>akapit 1</p>
+        </article>
+     
+        <!-- <h1>{{ 'Portfolio'|_ }}</h1> -->
+        <!-- % partial 'portfolio' %} -->
+    
+</section>
+<section id="sekcja5" class="sec"> 
+
+        <h1>{{ 'Kontakt'|_ }}</h1>
+    
+</section>

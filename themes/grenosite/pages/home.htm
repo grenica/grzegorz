@@ -1,0 +1,91 @@
+title = "home"
+url = "/"
+layout = "layout"
+is_hidden = 0
+
+[JanVince\SmallContactForm\Components\SmallContactForm contactForm]
+==
+<section id="sekcja">
+        <article id="naglowek">
+                <div id="info">
+                        <h1 id="info1"><span>Grzegorz</span>Czekaj</h1>
+                        <p id="info2">Web developer</p>
+                </div>
+        </article>
+        <article id="art1">
+                <header class="header_info">{{ 'O mnie'|_ }}</header>
+                <div id="art1_content">
+                        <img src="{{'Gcz_mini.png' |media }}" alt="Foto Grzegorz Czekaj"/>
+                        {% content 'about.htm' %}  
+                </div>
+                
+        </article>
+        <article id="art2">
+                <header class="header_info">{{ 'Oferta'|_ }}</header>
+                <div id="art2_content">
+                        <div class="oferta">
+                                <i class="icofont-box"></i>
+                                <h3>Strona internetowa od A do Z</h3>
+                                <p>Zajmę się kompleksowym przygotowaniem nowoczesnej i profesjonalnie wyglądającej witryny</p>
+                        </div>
+                        <div class="oferta">
+                                <i class="icofont-responsive"></i>
+                                <h3>Responsywny design</h3>
+                                <p>Przywiązuję szczególną wagę do RWD tak, by strona wyglądała doskonale nie tylko na dużym monitorze, ale też na ekranie smartfonu czy tabletu.</p>
+                        </div>
+                        <div class="oferta">
+                                        <i class="icofont-engineer"></i>
+                                        <h3>Aplikacje dedykowane</h3>
+                                        <p>Tworze dedykowane aplikacje webowe w nowoczesnym frameworku Laravel. Potrzebujesz coś nieszablonowego? Wykonam to dla Ciebie.</p>
+                        </div>
+                        <div class="oferta">
+                                        <i class="icofont-box"></i>
+                                        <h3>Zwiększenie funkcjonalności</h3>
+                                        <p>Możesz zlecić mi rozszerzenie istniejącej strony o nowe funkcje i możliwości</p>
+                        </div>
+                        <div class="oferta">
+                                        <i class="icofont-box"></i>
+                                        <h3>Administracja stron internetowych</h3>
+                                        <p>Jest potrzeba zmiany wyglądu, poważnej modyfikacji. Nie ma sprawy.Oferuję opiekę techniczną</p>
+                        </div>
+                        <div class="oferta">
+                                        <i class="icofont-leaf"></i>
+                                        <h3>Strona na CMS-ie ?</h3>
+                                        <p>Witryny są budowane w oparciu o OctoberCMS. Edycje mogą wykonać osoby nietechniczne </p>
+                        </div>
+                        <div class="oferta">
+                                        <i class="icofont-database-add"></i>
+                                        <h3>Aplikacje bazodanowe</h3>
+                                        <p>Nowoczesna witryna bez bazy danych to tylko gadzet. </p>
+                        </div>
+
+                </div>
+        </article>
+        <article id="art5">
+                <header class="header_info">{{ 'Portfolio'|_ }}</header>
+                {% partial 'portfolio' %}
+        </article> 
+        <article id="art3">
+                <header class="header_info">{{ 'Technologie'|_ }}</header>
+                <div><span class="tech"><i class="fab fa-html5"></i><p>html5</p></span></div>
+                <div><span class="tech"><i class="fab fa-sass"><p>sass</p></i></span></div>
+                <div><span class="tech"><i class="fab fa-envira"><p>OctoberCMS</p></i></span></div>
+                <div><span class="tech"><i class="fab fa-laravel"><p>Laravel</p></i></span></div>
+                <div><span class="tech"><i class="fab fa-php"><p>php</p></i></span></div>
+                <div><span class="tech"><i class="fas fa-database"><p>mysql</p></i></span></div>
+                
+        </article>
+
+        <article id="art4" >
+                <header class="header_info">{{ 'Kontakt'|_ }}</header>
+                <div class="contact-info">
+                        <p>Chętnię odpowiem na każde pytanie</p>
+                        <p>Podeślij maila lub wypełnij formularz</p>
+                        <!-- <i class="icofont-ui-email"></i> -->
+                                <a href="mailto:grzegorz.czekaj@gmail.com">grzegorz.czekaj@gmail.com</a> 
+                        <!-- <i class="icofont-phone-circle"><p>799 175 994</p></i> -->
+
+                </div>
+                {% component 'contactForm' %}
+        </article>
+</section>

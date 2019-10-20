@@ -1,0 +1,45 @@
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ this.page.description }}">
+        <title>{{ this.page.title }}</title>
+        {% styles %}
+        <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"> -->
+        <link href="{{ ['assets/scss/style.scss']|theme }}" rel="stylesheet">
+        <link href="{{ ['assets/vendor/icofont/icofont.css']|theme }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+       
+    </head>
+    <body>
+            <header id="header">
+                    Grzegorz Czekaj
+            </header>
+            <div class="lang">
+                {% partial 'langlinks' %}
+            </div>
+            <main>
+                {% page %}   
+            </main>
+            <footer id="footer" >
+                    Stopka
+            </footer>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+            <script  src="{{'assets/js/jquery-3.4.0.min.js'|theme }}"></script>
+
+            <script  src="{{'assets/js/app.js' |theme }}"></script>
+            <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+            <script src="{{ 'assets/js/animatedModal.min.js'|theme }}"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+           
+        {% framework extras %}
+        {% scripts %}
+       
+    </body>
+</html>
